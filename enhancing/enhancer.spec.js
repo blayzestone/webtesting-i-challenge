@@ -6,13 +6,15 @@ describe("enhancer", () => {
   });
 
   describe("repair()", () => {
-    const item = {
-      durability: 0,
-    };
-    const actual = enhancer.repair(item);
-    const expected = 100;
+    it("fully repairs the item's durability", () => {
+      const item = {
+        durability: 0,
+      };
+      const actual = enhancer.repair(item);
+      const expected = 100;
 
-    expect(actual.durability).toBe(expected);
+      expect(actual.durability).toBe(expected);
+    });
   });
 
   describe("success()", () => {
